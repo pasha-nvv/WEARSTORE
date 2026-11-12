@@ -1,0 +1,146 @@
+.editorial {
+  display: grid;
+  grid-template-columns: 1fr 0.85fr;
+  align-items: center;
+  gap: 48px;
+  padding: 80px 5%;
+  background: #fff;
+  color: #111;
+  box-sizing: border-box;
+}
+
+/* Image */
+
+.editorial__image {
+  width: 100%;
+  max-width: 560px;
+  height: 460px;
+  overflow: hidden;
+  background: #e9e9e6;
+}
+
+.editorial__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease;
+}
+
+.editorial__image:hover img {
+  transform: scale(1.03);
+}
+
+/* Content */
+
+.editorial__content {
+  width: 100%;
+  max-width: 440px;
+}
+
+.editorial__eyebrow {
+  margin: 0 0 22px;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+}
+
+.editorial__title {
+  margin: 0 0 24px;
+  font-size: clamp(44px, 5vw, 76px);
+  font-weight: 800;
+  letter-spacing: -0.07em;
+  line-height: 0.95;
+}
+
+.editorial__description {
+  max-width: 340px;
+  margin: 0 0 30px;
+  color: #666;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.editorial__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid #111;
+  color: #111;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.editorial__link:hover {
+  opacity: 0.55;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .editorial {
+    gap: 28px;
+    padding: 60px 4%;
+  }
+
+  .editorial__image {
+    height: 360px;
+  }
+
+  .editorial__title {
+    font-size: clamp(38px, 5vw, 54px);
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .editorial {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+    padding: 48px 16px;
+  }
+
+  .editorial__image {
+    max-width: none;
+    height: auto;
+    aspect-ratio: 4 / 5;
+  }
+
+  .editorial__content {
+    max-width: none;
+  }
+
+  .editorial__eyebrow {
+    margin-bottom: 16px;
+    font-size: 9px;
+  }
+
+  .editorial__title {
+    margin-bottom: 18px;
+    font-size: clamp(42px, 11vw, 58px);
+  }
+
+  .editorial__description {
+    margin-bottom: 24px;
+    font-size: 12px;
+    line-height: 1.7;
+  }
+
+  .editorial__link {
+    font-size: 9px;
+  }
+}
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+  .editorial__image img,
+  .editorial__link {
+    transition: none;
+  }
+}

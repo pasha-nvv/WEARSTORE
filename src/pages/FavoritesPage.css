@@ -1,0 +1,64 @@
+.favorites-page .favorites-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.favorites-page .favorites-toolbar a,
+.favorites-page .favorites-toolbar button {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #111;
+  font: inherit;
+  font-size: 12px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.favorites-page .favorites-toolbar button {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.favorites-page .favorites-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 64px 20px;
+  border: 1px solid #deded9;
+  text-align: center;
+}
+
+.favorites-page .favorites-empty h2 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 500;
+}
+
+.favorites-page .favorites-empty p {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.favorites-page .favorites-empty a {
+  padding: 16px 24px;
+  background: #111;
+  color: #fff;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.favorites-page :is(a, button):focus-visible {
+  outline: 2px solid #111;
+  outline-offset: 4px;
+}

@@ -1,0 +1,252 @@
+.site-header {
+  width: 100%;
+  background: #fff;
+  color: #111;
+  border-bottom: 1px solid #e5e5e5;
+  position: relative;
+  z-index: 10;
+}
+
+/* Головний рядок */
+
+.header__main {
+  min-height: 82px;
+  padding: 0 clamp(20px, 4vw, 64px);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Кнопка MENU */
+
+.header__menu-button {
+  justify-self: start;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  min-height: 48px;
+  padding: 0 8px;
+
+  border: none;
+  background: transparent;
+  color: #111;
+
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: opacity 0.2s ease;
+}
+
+/* SVG бургер-меню */
+
+.header__menu-button svg {
+  display: block;
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+/* Логотип */
+
+.header__logo {
+  justify-self: center;
+
+  color: #111;
+  text-decoration: none;
+
+  font-size: clamp(20px, 2vw, 27px);
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  line-height: 1;
+  white-space: nowrap;
+
+  transition: opacity 0.2s ease;
+}
+
+/* Контейнер правих кнопок */
+
+.header__actions {
+  justify-self: end;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Усі кнопки мають однаковий розмір */
+
+.header__actions button {
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+  padding: 0;
+
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: #111;
+
+  font-family: inherit;
+  line-height: 1;
+
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+
+  transition: opacity 0.2s ease;
+}
+
+/* SVG-іконки: пошук, обране, кошик */
+
+.header__actions button svg {
+  display: block;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+/* Трохи звужуємо сердечко */
+
+.header__actions button:nth-child(2) svg {
+  transform: scaleX(0.9);
+}
+
+/* Наведення */
+
+.header__menu-button:hover,
+.header__logo:hover,
+.header__actions button:hover {
+  opacity: 0.55;
+}
+
+/* Фокус клавіатурою */
+
+.header__menu-button:focus-visible,
+.header__logo:focus-visible,
+.header__actions button:focus-visible {
+  outline: 1px solid #111;
+  outline-offset: 3px;
+}
+
+/* Мобільна версія */
+
+@media (max-width: 600px) {
+  .header__main {
+    min-height: 68px;
+  }
+
+  .header__menu-button {
+    min-height: 44px;
+    padding: 0 4px;
+    gap: 7px;
+
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+  }
+
+  .header__menu-button svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .header__logo {
+    font-size: 15px;
+    letter-spacing: 0.06em;
+  }
+
+  .header__actions {
+    gap: 2px;
+  }
+
+  .header__actions button {
+    width: 34px;
+    height: 34px;
+  }
+
+  .header__actions button svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+.header__actions .header__cart-button {
+  color: inherit;
+  text-decoration: none;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+}
+
+.header__cart-count {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  border-radius: 999px;
+  background: #111;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.header__actions .header__favorites-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.header__favorites-count {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  border-radius: 999px;
+  background: #111;
+  color: #fff;
+  font-size: 11px;
+  line-height: 1;
+}
+
+@media (max-width: 600px) {
+  .header__actions .header__favorites-link {
+    width: 34px;
+    height: 34px;
+  }
+}
